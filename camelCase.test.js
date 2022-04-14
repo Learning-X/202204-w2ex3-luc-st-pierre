@@ -22,3 +22,16 @@ const camelCase = (lowerCamelCaseText) => {
     .join("_")
     .toLowerCase();
 };
+
+describe("Given a function camelCase", () => {
+  describe("When it receive a lowerCamelCase text", () => {
+    test("Then it should return a snake_case text", () => {
+      const lowerCamelCase = "lowerCamelCase";
+      const expectedSnakeCase = "lower_camel_case";
+
+      const resultSnakeCase = camelCase(lowerCamelCase);
+
+      expect(resultSnakeCase).toBe(expectedSnakeCase);
+    });
+  });
+});
